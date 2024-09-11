@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EFF0EA">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Faça o cadastro"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Crie sua conta e aproveite!!"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/CriarNomeUsuario"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Crie seu nome"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/ColoqueEmail"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Coloque seu email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/CriarSenha"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Crie sua senha"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/ConfirmaSenha"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Confirme sua senha sua senha"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/ButtonCadastrarConta"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E0E0E0"
+        android:text="Cadastrar conta"
+        android:textColor="#007BFF" />
+
+    <Button
+        android:id="@+id/ButtonVoltar"
+        android:layout_marginTop="20dp"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E0E0E0"
+        android:text="Volte a tela inicial"
+        android:textColor="#007BFF" />
+</LinearLayout>
