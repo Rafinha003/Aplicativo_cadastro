@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 
 
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
 
             if ( username == usuarioCadastrado && password == senhaCadastrado && email == emailCadastrado) {
                 Toast.makeText(this, "Bem-vindo, $usuarioCadastrado!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, TelaListagem::class.java)
+                startActivity(intent)
             } else if(username.isEmpty() || password.isEmpty() || email.isEmpty()) {
                 Toast.makeText(this, "Digite todas as informações para login", Toast.LENGTH_SHORT).show()
             } else{
