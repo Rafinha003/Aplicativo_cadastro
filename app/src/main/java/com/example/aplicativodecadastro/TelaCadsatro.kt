@@ -38,7 +38,6 @@ class TelaCadsatro : AppCompatActivity() {
             if(valorNome.isEmpty() || valorSenha.isEmpty() || valorEmail.isEmpty() || confirmaSenha.isEmpty()){
                 Toast.makeText(this, "Existe campos que ainda não foram preenchido", Toast.LENGTH_SHORT).show()
             }else{
-
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("nomeUsuario", valorNome)
                 intent.putExtra("senhaUsuario", valorSenha)

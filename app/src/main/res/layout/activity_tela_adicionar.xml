@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#EFF0EA"
+    tools:context=".Tela_adicionar">
+
+    <!-- Texto de instrução -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicione os itens que você precisa à sua lista de maneira fácil!"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Campo para o nome do item -->
+    <TextView
+        android:id="@+id/textViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item: "
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome do item"
+        app:layout_constraintStart_toEndOf="@id/textViewItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewItem"
+        android:layout_marginStart="8dp" />
+
+    <!-- Campo para a quantidade -->
+    <TextView
+        android:id="@+id/textViewQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qnt: "
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextItem"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextQuantidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade"
+        app:layout_constraintStart_toEndOf="@id/textViewQuantidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewQuantidade"
+        android:layout_marginStart="8dp" />
+
+    <!-- Campo para a categoria -->
+    <TextView
+        android:id="@+id/textViewCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria: "
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextQuantidade"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Categoria"
+        app:layout_constraintStart_toEndOf="@id/textViewCategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewCategoria"
+        android:layout_marginStart="8dp" />
+
+    <!-- Botão Cancelar -->
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCategoria"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Botão Confirmar -->
+    <Button
+        android:id="@+id/buttonConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCategoria"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
