@@ -4,10 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class Tela_adicionar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +30,11 @@ class Tela_adicionar : AppCompatActivity() {
             val itemName = itemNameEditText.text.toString()
             val quantidade = quantidadeEditText.text.toString()
             val categoria = categoriaEditText.text.toString()
+
+            if(categoria.isNullOrEmpty() || quantidade.isNullOrEmpty() || itemName.isNullOrEmpty()){
+                Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             val intent = Intent(this, TelaListagem::class.java)
             intent.putExtra("itemName", itemName)

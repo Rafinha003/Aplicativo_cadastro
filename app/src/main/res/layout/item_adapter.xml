@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,55 +5,96 @@
     android:layout_height="wrap_content"
     android:background="#EFF0EA">
 
+    <!-- Título -->
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
             <Button
                 android:id="@+id/checkButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:layout_marginEnd="8dp"
                 android:background="@drawable/baseline_check_box_outline_blank_24"
+                android:backgroundTint="#E0E0E0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/nomeItemTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="Nome do Item"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/checkButton"
-                app:layout_constraintTop_toTopOf="@id/checkButton"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/checkButton" />
 
             <TextView
-                android:id="@+id/textViewQuantidade"
+                android:id="@+id/QuantidadetextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="Quantidade"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/checkButton"
-                app:layout_constraintTop_toBottomOf="@id/textView"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/nomeItemTextView" />
 
             <TextView
                 android:id="@+id/textViewCategoria"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:text="Categoria"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/checkButton"
-                app:layout_constraintTop_toBottomOf="@id/textViewQuantidade"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/QuantidadetextView" />
+
+            <!-- Botões de editar e excluir -->
+
+            <Button
+                android:id="@+id/editarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E0E0E0"
+                android:text="Editar"
+                android:textColor="#007BFF"
+                app:layout_constraintEnd_toStartOf="@id/deletarButton"
+                app:layout_constraintHorizontal_bias="0.922"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCategoria" />
+
+            <Button
+                android:id="@+id/deletarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E0E0E0"
+                android:text="Excluir"
+                android:textColor="#007BFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCategoria" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

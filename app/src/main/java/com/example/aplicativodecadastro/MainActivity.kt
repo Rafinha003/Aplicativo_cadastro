@@ -3,6 +3,7 @@ package com.example.aplicativodecadastro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
             val username = editTextName.text.toString()
             val password = editTextPassword.text.toString()
             val email = editTextEmail.text.toString()
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(emailCadastrado).matches()){
+                Toast.makeText(this, "E-mail inválido", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
 
             if ( username == usuarioCadastrado && password == senhaCadastrado && email == emailCadastrado) {
                 Toast.makeText(this, "Bem-vindo, $usuarioCadastrado!", Toast.LENGTH_SHORT).show()

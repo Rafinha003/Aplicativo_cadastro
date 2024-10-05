@@ -3,6 +3,7 @@ package com.example.aplicativodecadastro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
@@ -35,6 +36,11 @@ class TelaCadsatro : AppCompatActivity() {
                 return@setOnClickListener;
             }
 
+            if(!Patterns.EMAIL_ADDRESS.matcher(valorEmail).matches()){
+                Toast.makeText(this, "E-mail inválido", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if(valorNome.isEmpty() || valorSenha.isEmpty() || valorEmail.isEmpty() || confirmaSenha.isEmpty()){
                 Toast.makeText(this, "Existe campos que ainda não foram preenchido", Toast.LENGTH_SHORT).show()
             }else{
@@ -43,6 +49,7 @@ class TelaCadsatro : AppCompatActivity() {
                 intent.putExtra("senhaUsuario", valorSenha)
                 intent.putExtra("emailUsuario", valorEmail)
                 startActivity(intent)
+                Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show()
             }
         }
     }
